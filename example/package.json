@@ -1,0 +1,20 @@
+{
+  "name": "asciidoctor-loader-example",
+  "version": "0.1.0",
+  "description": "example app using the asciidoctor-loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --port 4000"
+  },
+  "author": "David Loidolt <david@loidolt.at>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.24.0",
+    "highlight.js": "^9.6.0",
+    "loader-utils": "^0.2.12",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
