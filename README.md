@@ -14,9 +14,12 @@ var readme = require('html!asciidoctor!./README.adoc');
 ```
 
 
-### Example config
+## Config
 
-This webpack config can load asciidoctor files.
+Config examples for loading asciidoctor files.
+
+### Webpack 1
+
 
 ``` javascript
 module.exports = {
@@ -27,6 +30,31 @@ module.exports = {
   }
 };
 ```
+
+### Webpack 2
+
+``` javascript
+    rules: [
+        {
+            test: /\.adoc/,
+            use: [
+                {
+                    loader: "html-loader"
+                },
+                {
+                    loader: "asciidoctor-loader",
+                    options: {
+                        attributes: 'showtitle'
+                    }
+                }
+            ]
+
+        }
+    ]
+```
+
+The attribute `showtitle` allows h1 header to be rendered.
+
 
 ## License
 
