@@ -53,7 +53,7 @@ module.exports = {
     ]
 ```
 
-The attribute `showtitle` allows h1 header to be rendered.
+The attribute `showtitle` allows h1 headers to be rendered.
 
 
 ## License
