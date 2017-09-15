@@ -1,21 +1,21 @@
 "use strict";
 
-var loaderUtils = require("loader-utils");
-var assign = require("object-assign");
-var asciidoctor = require('asciidoctor.js')();
+const loaderUtils = require("loader-utils"),
+    assign = require("object-assign"),
+    asciidoctor = require('asciidoctor.js')();
 
 // default option
-var defaultOptions = {
-  safe: 'unsafe',
-  sourceHighlighter: 'highlightjs'
+const defaultOptions = {
+    safe: 'unsafe',
+    sourceHighlighter: 'highlightjs'
 };
 
 module.exports = function (content) {
-  // merge params and default config
-  var query = loaderUtils.parseQuery(this.query);
-  var options = assign({}, defaultOptions, query, this.options["asciidoctorLoader"]);
+    // merge params and default config
+    const query = loaderUtils.parseQuery(this.query),
+        options = assign({}, defaultOptions, query, this.options["asciidoctorLoader"]);
 
-  this.cacheable();
+    this.cacheable();
 
-  return asciidoctor.convert(content, options);
+    return asciidoctor.convert(content, options);
 };
