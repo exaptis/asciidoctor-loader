@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/exaptis/asciidoctor-loader",
   "dependencies": {
-    "asciidoctor.js": "1.5.5-4",
+    "asciidoctor.js": "1.5.3",
     "html-loader": "^0.4.3",
     "loader-utils": "~0.2.15",
     "object-assign": "~4.1.0"
