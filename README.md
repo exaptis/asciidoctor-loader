@@ -39,7 +39,10 @@ module.exports = {
             test: /\.adoc/,
             use: [
                 {
-                    loader: "html-loader"
+                    loader: "html-loader",
+                     options: {
+                        interpolate: 'require'
+                     }
                 },
                 {
                     loader: "asciidoctor-loader",
@@ -55,6 +58,9 @@ module.exports = {
 
 The attribute `showtitle` allows h1 headers to be rendered.
 
+Use the `html-loader` option `interpolate` to enable the asciidoc `include::[]` syntax.
+
+Files loaded through `include::[]` will be affected from other webpack loaders.
 
 ## License
 
