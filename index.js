@@ -6,7 +6,7 @@ var asciidoctor = require('asciidoctor.js')();
 
 // default option
 var defaultOptions = {
-  safe: 'server',
+  safe: 'unsafe',
   sourceHighlighter: 'highlightjs'
 };
 
