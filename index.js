@@ -27,8 +27,7 @@ module.exports = function (content) {
 
     }
 
-
     this.cacheable();
 
-    return asciidoctor.convert(content, options);
+    return asciidoctor.Asciidoctor(true).$convert(content, asciidoctor.Opal.hash(options));
 };
